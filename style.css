@@ -1,0 +1,311 @@
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+/*------------Nav Bar------------*/
+.navbar .nav-link{
+    font-size: 14px;
+    text-transform: uppercase;
+    padding-left: 16px!important;
+    padding-right: 16px!important;
+}
+.navbar-toggler{
+    outline: none!important;
+}
+.bg-color{
+    background: #FF6363;
+}
+.navbar-brand{
+    font-family: 'Dancing Script', cursive;
+    width: 600;
+}
+/*------------Slider------------*/
+.carousel-item{
+    height: 600px;
+}
+.carousel-image-1{
+    background:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.4)), 
+    url('./images/slider-image-1.jpg');
+    background-size: cover;
+}
+.carousel-image-2{
+    background:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.4)),
+     url('./images/slider-image-2.jpg');
+    background-size: cover;
+}
+.carousel-image-3{
+    background: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.4)),
+     url('./images/slider-image-3.jpg');
+    background-size: cover;
+}
+.h-color{
+    color:#fff;
+
+}
+.btn-color{
+    background: #F8B400;
+    color: #fff;
+}
+.btn-color:hover{
+    color: gray;
+}
+@keyframes slide-btn {
+    16%{
+        transform: translateY(8px);
+    }
+    33%{
+        transform: translateY(-6px);
+    }
+    50%{
+        transform: translateY(4px);
+    }
+    65%{
+        transform: translateY(-2px);
+    }
+    85%{
+        transform: translateY(1px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+.slide-btn{
+    display: inline-block;
+    vertical-align: middle;
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0);
+}
+.slide-btn:hover, 
+.slide-btn:focus,
+.slide-btn:active{
+    animation-name: slide-btn;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+}
+/*------------Slider------------*/
+.service-icon{
+    display: inline-block;
+    font-size: 32px;
+    margin-bottom: 16px;
+    color: #000;
+    padding: 8px 16px;
+}
+
+/*------------Products section------------*/
+#products{
+    background:#125B50;
+  }
+  .product-title{
+    color: #fff;
+  }
+/*------------Float Shadow------------*/
+.single-item {
+  display: inline-block;
+  vertical-align: middle;
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgb(247, 241, 241);
+  position: relative;
+  transition-duration: 0.3s;
+  transition-property: transform;
+  cursor: pointer;
+}
+.single-item:before {
+  pointer-events: none;
+  position: absolute;
+  z-index: -1;
+  content: '';
+  top: 100%;
+  left: 5%;
+  height: 10px;
+  width: 90%;
+  opacity: 0;
+   background: radial-gradient(ellipse at center, rgba(248, 248, 248, 0.35) 0%, rgba(247, 244, 244, 0) 80%);
+   transition-duration: 0.3s;
+  transition-property: transform, opacity;
+}
+.single-item:hover, .single-item:focus, .single-item:active {
+    transform: translateY(-5px);
+  /*move the element up by 5px */
+}
+.single-item:hover:before, .single-item:focus:before, .single-item:active:before {
+  opacity: 1;
+  transform: translateY(5px);
+  /* move the element down by 5px (it will stay in place because it's attached to the element that also moves up 5px) */
+}
+.img-container{
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+/*------------Grow Shadow------------*/
+.img-container{
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: box-shadow, transform;
+  transition-property: box-shadow, transform;
+}
+.img-container:hover, .product-img:focus, .product-img:active {
+   box-shadow: 1px 0px 1px 4px rgba(247, 243, 243, 0.932);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+  /*------------End of Product Section------------*/
+  /*------------About Section------------*/
+.about-sec{
+    margin-top: 25px;
+  }
+  .text-color{
+    color: #000;
+  }
+  .watch-img{
+    margin-top: 35px;
+  }
+  .watch-img{
+    animation-name: imgLeft;
+    animation-duration: 3s;
+  
+  }
+  .about-text{
+    animation-name:textRight;
+    animation-duration: 3s;
+  }
+  @keyframes imgLeft {
+    0%{
+      transform:translateX(-120px);
+      opacity: 0;
+    }
+    100%{
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+    
+  @keyframes textRight {
+    0%{
+      transform:translateX(30px);
+      opacity: 0;
+    }
+    100%{
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  /*------------Best Seller------------*/
+.seller{
+  background: #F8B400;
+  color: #fff;
+  margin-top: 30px;
+}
+.img-top{
+  margin-top: 10px;
+}
+
+.seller-item{
+  text-align: right;
+
+}
+.seller-item p{
+  position: absolute;
+  right: 30px;
+  left: 30px;
+  padding: 10px 0;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+}
+.seller-item p{
+  bottom: 30px;
+  line-height: 1.5;
+  transform: translate3d(0, 100%, 0);
+}
+.seller-item p{
+  opacity:0;
+  transition: opacity 0.35s, transform 0.35s;
+}
+
+.seller-item:hover p{
+  opacity: 1;
+  transform: translate3d(0,0,0);
+}
+/*------------End of Best Seller*------------*/
+/*Contact us */
+.btn-color{
+  background: #FAF5E4;
+  color: #000;
+}
+
+/* Wobble Vertical */
+@-webkit-keyframes cont-btn {
+  16.65% {
+         transform: translateY(8px);
+  }
+  33.3% {
+   transform: translateY(-6px);
+  }
+  49.95% {
+      transform: translateY(4px);
+  }
+  66.6% {
+       transform: translateY(-2px);
+  }
+  83.25% {
+       transform: translateY(1px);
+  }
+  100% {
+      transform: translateY(0);
+  }
+}
+@keyframes cont-btn {
+  16.65% {
+    
+    transform: translateY(8px);
+  }
+  33.3% {
+    
+    transform: translateY(-6px);
+  }
+  49.95% {
+    
+    transform: translateY(4px);
+  }
+  66.6% {
+   
+    transform: translateY(-2px);
+  }
+  83.25% {
+   
+    transform: translateY(1px);
+  }
+  100% {
+   
+    transform: translateY(0);
+  }
+}
+.cont-btn {
+  display: inline-block;
+  vertical-align: middle;
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+.cont-btn:hover, .cont-btn:focus, .cont-btn:active {
+  
+  animation-name: slide-btn;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+}
+/*==Footer===*/
+.footer{
+  background: #FF6363;
+  color: #fff;
+}
+.fab{
+  padding-left: 10px;
+}
